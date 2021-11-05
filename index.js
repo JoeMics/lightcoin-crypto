@@ -36,15 +36,8 @@ const myAccount = new Account("snow-patrol");
 
 const t1 = new Withdrawal(50.25, myAccount);
 t1.commit();
-console.log(myAccount.balance);
+console.log("This is the balance after the withdrawing $50.25", myAccount.balance);
 
-// const t2 = new Withdrawal(9.99);
-// t2.commit();
-// console.log('Transaction 2:', t2);
-
-// console.log('Balance:', balance);
-
-
-// const t3 = new Deposit(120.00);
-// t3.commit();
-// console.log('Transaction 3:', t3);
+const t2 = new Deposit(120, myAccount);
+t2.commit();
+console.log("This is the balance after depositing $120", myAccount.balance);
