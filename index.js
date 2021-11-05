@@ -1,5 +1,3 @@
-let balance = 500.00;
-
 class Account {
   constructor(username) {
     this.username = username;
@@ -37,20 +35,17 @@ class Deposit {
 // We use the code below to "drive" the application logic above and make sure it's working as expected
 const myAccount = new Account("snow-patrol");
 
-const t1 = new Withdrawal(50.25);
+const t1 = new Withdrawal(50.25, myAccount);
 t1.commit();
-console.log('Transaction 1:', t1);
+console.log(myAccount.balance);
 
-const t2 = new Withdrawal(9.99);
-t2.commit();
-console.log('Transaction 2:', t2);
+// const t2 = new Withdrawal(9.99);
+// t2.commit();
+// console.log('Transaction 2:', t2);
 
-console.log('Balance:', balance);
+// console.log('Balance:', balance);
 
 
-
-const t3 = new Deposit(120.00);
-t3.commit();
-console.log('Transaction 3:', t3);
-
-console.log('Balance:', balance);
+// const t3 = new Deposit(120.00);
+// t3.commit();
+// console.log('Transaction 3:', t3);
