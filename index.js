@@ -1,5 +1,12 @@
 let balance = 500.00;
 
+class Account {
+  constructor(username) {
+    this.username = username;
+    this.balance = 0;
+  }
+}
+
 class Withdrawal {
 
   constructor(amount) {
@@ -27,6 +34,7 @@ class Deposit {
 
 // DRIVER CODE BELOW
 // We use the code below to "drive" the application logic above and make sure it's working as expected
+const myAccount = new Account("snow-patrol");
 
 const t1 = new Withdrawal(50.25);
 t1.commit();
